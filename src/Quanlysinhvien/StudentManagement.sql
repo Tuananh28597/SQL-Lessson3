@@ -59,6 +59,27 @@ values (1,1,8,1),
        (1,2,10,2),
        (2,1,12,1);
 
+use StudentManagement;
+select*
+from Student;
+
+select*
+from Student
+WHERE Status = true;
+
+select *
+from subject
+where Credit <10;
+
+select S.StudentId, S.StudentName, C.ClassId, C.ClassName
+from Student S JOIN Class C on C.ClassID = S.ClassID
+where C.ClassName = 'A1';
+
+select S.StudentId, S.StudentName, Sub.SubName, M.Mark
+from Student S join mark M on S.StudentID = M.StudentId join subject Sub on M.SubId = Sub.SubId
+where Sub.SubName = 'CF';
+
+
 
 
 
